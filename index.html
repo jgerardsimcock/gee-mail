@@ -1,21 +1,54 @@
 <html>
 	<head>
-		<link type="text/css" href="css/style.css" rel="stylesheet">
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type="text/javascript" src="mail-generator.js"></script>
-		<script>window.onload=loadGeeMails;</script>
-		<script>window.setTimeout(function(getNewmassage,3000);</script>
+		<link type="text/css" href="css/style.css" rel="stylesheet" media="screen">
+		<script type="text/javascript" src="js/mail-generator.js"></script>
+		<script type="text/javascript">
+		window.onload=function() {
+			for(var i =0; i = window.geemails.length; i++) {
+				var message = window.geemails[i];
+				var main = document.getElementById('sender');
+				var child = document.createElement("div");
+				//child.innerHTML = message.sender;
+				main.appendChild(child);
+				console.log(window.geemails[i]);
+
+				var main = document.getElementById('subject');
+				var child = document.createElement("div");
+				//child.innerHTML = message.subject;
+				main.appendChild(child);
+
+				var main = document.getElementById('body');
+				var child = document.createElement("div");
+				//child.innerHTML = message.body;
+				main.appendChild(child);
+
+				var getRandomDate = window.getRandomDate; 
+				var date = document.getElementById('date');
+				var child = document.createElement("div");
+				main.appendChild(child);
+
+		};
+
+		emailCount=function() {
+		for(var i =0; i=window.geemails.length; i++)
+			var count= i;
+			var displayCount=document.getElementById('count')
+			setTimeout(emailCount(){displayCount.value= i + "messages"},1000);
+		}
+		</script>
+		
 
 
 		
 	</head>
 	<body>
 	<header>
-		<div class="sender">From</div>
-		<div class="subject">Subject</div>
-		<div class="date">Date</div>
+		<div id="sender">From</div>
+		<div id="subject">Subject</div>
+		<div id="date">Date</div>
+		<div id="inboxCount"=></div>
 	
 	</header>
-		<div class="container" id="main"></div>
+		<div class="container" id="body"></div>
 	</body>
 </html>
